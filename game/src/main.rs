@@ -33,9 +33,9 @@ struct LandTile {                       //a tile in the land
 
 impl LandTile {
     ///generates new tile using stolen sprite
-    fn new_america(coords: LandLocation) -> Self {
+    fn new_america(coords: LandLocation) -> Self {          
         let spritesheet = engine::scale_spritesheet(&engine::load_spritesheet("america.gif").unwrap(), 4);
-        Self {
+        Self {                                              //^load sprite sheet
             width: spritesheet[0][0].len(),                 //sets sprite width
             height: spritesheet[0].len(),                   //sets sprite height
             spritesheet,                                    //sets sprite sheet
