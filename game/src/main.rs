@@ -82,8 +82,8 @@ fn update_land(land: &mut Vec<Vec<LandTile>>) {
 fn draw_land(screen: &mut Vec<Vec<[u8;4]>>, land: &Vec<Vec<LandTile>>) {
     let height = land[0][0].height;                                                         //get width of sprite
     let width = land[0][0].width;                                                           //get height of sprite
-    let x_start = (screen[0].len()/2) - land[0].len()*(width/4);                            //set starting position of land
-    let y_start = (screen.len()/2) - land.len()*(height/4);                                 //set starting position of land
+    let x_start = (screen[0].len()/2) - land[0].len()*(width/8);                            //set starting position of land
+    let y_start = (screen.len()/2) - land.len()*(height/8);                                 //set starting position of land
     for row in land {                                                                       //for row in land
         for tile in row {                                                                   //for tile in row
             let x = x_start + (tile.coords.0*2*(width/8)) - (tile.coords.1*2*(height/8));   //let sprite x position = a lot of math
