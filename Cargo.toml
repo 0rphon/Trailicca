@@ -1,0 +1,8 @@
+[workspace]
+members = [
+    "engine",
+    "game",
+]
+
+[profile.dev]
+opt-level = 3
